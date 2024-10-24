@@ -1,0 +1,72 @@
+version: "3.1"
+
+nlu:
+  - intent: affirm
+    examples: |
+      - sí
+      - claro
+      - por supuesto
+      - correcto
+
+  - intent: deny
+    examples: |
+      - no
+      - para nada
+      - en absoluto
+
+  - intent: bot_challenge
+    examples: |
+      - ¿Eres un bot?
+      - ¿Eres humano?
+      - ¿Quién te creó?
+
+  - intent: mood_great
+    examples: |
+      - Me siento genial
+      - Estoy muy contento
+      - Todo está bien
+
+  - intent: mood_unhappy
+    examples: |
+      - Me siento mal
+      - Estoy triste
+      - No estoy bien
+
+  - intent: inscribir_materia
+    examples: |
+      - Quiero inscribirme en [Programación I](subject)
+      - Inscribirme en [Cálculo II](subject)
+      - Me gustaría tomar [Álgebra Lineal](subject)
+      - Por favor, inscribe [Física I](subject)
+
+  - intent: listar_materias
+    examples: |
+      - Muéstrame las materias disponibles
+      - Quiero ver las materias que puedo tomar
+      - ¿Qué materias están disponibles?
+
+  - intent: cancelar_materia
+    examples: |
+      - Quiero cancelar la inscripción en [Programación I](subject)
+      - Cancelar [Cálculo II](subject)
+      - Me gustaría retirar [Álgebra Lineal](subject)
+
+  - intent: consultar_materias_inscritas
+    examples: |
+      - ¿Qué materias estoy cursando?
+      - Quiero ver mis materias inscritas
+      - ¿Cuántas materias tengo inscritas?
+
+  - intent: greet
+    examples: |
+      - Hola
+      - Buenos días
+      - ¿Qué tal?
+
+  - intent: goodbye
+    examples: |
+      - Adiós
+      - Nos vemos luego
+      - Hasta pronto
+
+

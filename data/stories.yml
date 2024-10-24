@@ -1,0 +1,49 @@
+version: "3.1"
+
+stories:
+  - story: listar materias
+    steps:
+      - intent: listar_materias
+      - action: action_listar_materias
+
+  - story: inscribir materia
+    steps:
+      - intent: inscribir_materia
+      - action: action_inscribir_materia
+
+  - story: cancelar materia
+    steps:
+      - intent: cancelar_materia
+      - action: action_cancelar_materia
+
+  - story: consultar materias inscritas
+    steps:
+      - intent: consultar_materias_inscritas
+      - action: action_consultar_materias_inscritas
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye

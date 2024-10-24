@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - listar_materias
+  - inscribir_materia
+  - cancelar_materia
+  - consultar_materias_inscritas
+  - greet         
+  - goodbye       
+  - affirm        
+  - deny          
+  - mood_great    
+  - mood_unhappy  
+  - bot_challenge
+
+entities:
+  - subject  # Entidad para la materia
+
+forms:
+  inscribir_materia_form:
+    required_slots:
+      - student_id
+      - subject
+
+slots:
+  student_id:
+    type: text
+    mappings:
+      - type: from_text
+
+  subject:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: subject
+
+actions:
+  - action_listar_materias
+  - action_inscribir_materia
+  - action_cancelar_materia
+  - action_consultar_materias_inscritas
+  - utter_goodbye        
+  - utter_greet          
+  - utter_happy          
+  - utter_cheer_up       
+  - utter_did_that_help  
+  - utter_iamabot        
+
+responses:
+  utter_greet:
+    - text: "¡Hola! ¿Cómo puedo ayudarte hoy?"
+
+  utter_goodbye:
+    - text: "¡Adiós! ¡Que tengas un buen día!"
+
+  utter_happy:
+    - text: "¡Me alegra saber que estás bien!"
+
+  utter_cheer_up:
+    - text: "No te preocupes, ¡todo mejorará!"
+
+  utter_did_that_help:
+    - text: "¿Te ha servido esta respuesta?"
+
+  utter_iamabot:
+    - text: "Soy Udecbot, tu asistente virtual."
+
